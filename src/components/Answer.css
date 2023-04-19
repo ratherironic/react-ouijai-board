@@ -1,0 +1,102 @@
+.board-application {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form {
+  filter: blur(0px);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  height: auto;
+  opacity: 1;
+  transition: opacity 2s ease-in, filter 0.8s ease-in, height 2s ease-in;
+  width: 400px;
+}
+
+form.data-sent {
+  filter: blur(1.4rem);
+  opacity: 0;
+  height: 0;
+}
+
+label {
+  display: block;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #333;
+  margin: 0rem 1rem 1rem;
+}
+
+input {
+  background: url('../assets/pencil.svg') no-repeat center left;
+  background-size: 1.5rem;
+  color: #333;
+  max-width: max-content;
+  margin: 1rem;
+  font-size: 1.4rem;
+  padding: 0rem 0 0rem 1.8rem;
+  width: 100%;
+  border: 0px;
+  border-bottom: 2px solid #91713F;
+}
+
+.board-details {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  filter: blur(1rem);
+  transition: opacity 2s ease-in, filter 0.8s ease-in;
+  margin-bottom: 5rem;
+}
+
+.board-details.board-display {
+  opacity: 1;
+  filter: blur(0rem);
+}
+
+button {
+  background: #464D56;
+  border: 2px solid #F2E1C2;
+  box-shadow: 1px 7px 7px rgba(107, 16, 14, 0.4);
+  cursor: pointer;
+  outline: 5px solid #464D56;
+  color: #F2E1C2;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  padding: 1rem 2.3rem;
+  max-width: 300px;
+  transform: scale(1);
+  transition: transform 0.1s ease-in;
+  position: relative;
+  width: 100%;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.board-details-content {
+  align-items: flex-start;
+  padding: 1rem 2rem;
+  margin-bottom: 3rem;
+  max-width: 420px;
+}
+
+.board-details-content p {
+  text-align: center;
+  width: 100%;
+}
+.board-details-content span {
+  display: block;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.actual-answer {
+  color: #fff;
+}

@@ -1,0 +1,37 @@
+.board-holder {
+  position: relative;
+  width: 1034px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  opacity: 0;
+  filter: blur(1rem);
+  transition: opacity 0.8s ease-in, filter 0.4s ease-in, height 0.1s ease-in;
+}
+.board-holder.board-display {
+  height:716px;
+  filter: blur(0rem);
+  overflow: visible;
+  opacity: 1;
+}
+.board-holder:before {
+  content: '';
+  background: url('../assets/pointer.png') no-repeat;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.45s ease transform;
+  height: 245px;
+  width: 195px;
+  z-index: 25;
+}
+.board {
+  background: url('../assets/board.png') no-repeat;
+  box-shadow: 1px 7px 7px rgba(107, 16, 14, 0.4);
+  border-radius: 54px;
+  height:716px;
+  width: 1034px;
+  transform: translate(0, 0);
+  z-index: 15;
+}

@@ -1,0 +1,280 @@
+* {
+  font-family: 'Averia Libre', cursive;
+}
+
+body {
+  background: #D56B4F;
+}
+
+#app {
+  align-items: center;
+  display: flex;
+}
+
+.app-content-holder {
+  background: #E1C271;
+  border: 10px solid #F2E1C2;
+  border-radius: 2rem;
+  display: flex;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1.5rem 0;
+}
+.app-content-holder:before {
+  content: '';
+  display: block;
+  background: url('./arrow.png') no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  bottom: -56px;
+  left: 50%;
+  transform: translate(-50%, 0%) rotate(-180deg);
+  height: 67px;
+  width: 67px;
+}
+.app-content-holder:after {
+  content: '';
+  display: block;
+  background: url('./arrow.png') no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  top: -56px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  height: 67px;
+  width: 67px;
+}
+
+.board-holder.a:before {
+  transform: translate(-480px, -170px);
+}
+.board-holder.b:before {
+  transform: translate(-420px, -190px);
+}
+.board-holder.c:before {
+  transform: translate(-360px, -210px);
+}
+.board-holder.d:before {
+  transform: translate(-300px, -230px);
+}
+.board-holder.e:before {
+  transform: translate(-230px, -240px);
+}
+.board-holder.f:before {
+  transform: translate(-170px, -250px);
+}
+.board-holder.g:before {
+  transform: translate(-100px, -250px);
+}
+.board-holder.h:before {
+  transform: translate(-40px, -250px);
+}
+.board-holder.i:before {
+  transform: translate(20px, -240px);
+}
+.board-holder.j:before {
+  transform: translate(70px, -240px);
+}
+.board-holder.k:before {
+  transform: translate(130px, -220px);
+}
+.board-holder.l:before {
+  transform: translate(200px, -200px);
+}
+.board-holder.m:before {
+  transform: translate(270px, -170px);
+}
+.board-holder.n:before {
+  transform: translate(-500px, -30px);
+}
+.board-holder.o:before {
+  transform: translate(-430px, -60px);
+}
+.board-holder.p:before {
+  transform: translate(-370px, -80px);
+}
+.board-holder.q:before {
+  transform: translate(-300px, -90px);
+}
+.board-holder.r:before {
+  transform: translate(-230px, -110px);
+}
+.board-holder.s:before {
+  transform: translate(-170px, -120px);
+}
+.board-holder.t:before {
+  transform: translate(-110px, -120px);
+}
+.board-holder.u:before {
+  transform: translate(-40px, -120px);
+}
+.board-holder.v:before {
+  transform: translate(30px, -120px);
+}
+.board-holder.w:before {
+  transform: translate(100px, -100px);
+}
+.board-holder.x:before {
+  transform: translate(180px, -80px);
+}
+.board-holder.y:before {
+  transform: translate(240px, -60px);
+}
+.board-holder.z:before {
+  transform: translate(300px, -30px);
+}
+.board-holder.num1:before {
+  transform: translate(-350px, 30px);
+}
+.board-holder.num2:before {
+  transform: translate(-310px, 30px);
+}
+.board-holder.num3:before {
+  transform: translate(-260px, 30px);
+}
+.board-holder.num4:before {
+  transform: translate(-200px, 30px);
+}
+.board-holder.num5:before {
+  transform: translate(-150px, 30px);
+}
+.board-holder.num6:before {
+  transform: translate(-90px, 30px);
+}
+.board-holder.num7:before {
+  transform: translate(-30px, 30px);
+}
+.board-holder.num7:before {
+  transform: translate(-30px, 30px);
+}
+.board-holder.num8:before {
+  transform: translate(20px, 30px);
+}
+.board-holder.num9:before {
+  transform: translate(80px, 30px);
+}
+.board-holder.num0:before {
+  transform: translate(130px, 30px);
+}
+.board-holder.bye:before {
+  transform: translate(-100px, 160px);
+}
+
+
+
+/* .board.a {
+  transform: translate(330px, 20px);
+} 
+.board.b {
+  transform: translate(280px, 50px);
+}
+.board.c {
+  transform: translate(230px, 80px);
+}
+.board.d {
+  transform: translate(170px, 100px);
+}
+.board.e {
+  transform: translate(110px, 120px);
+}
+.board.f {
+  transform: translate(60px, 130px);
+}
+.board.g {
+  transform: translate(0px, 130px);
+}
+.board.h {
+  transform: translate(-70px, 130px);
+}
+.board.i {
+  transform: translate(-120px, 120px);
+}
+.board.j {
+  transform: translate(-160px, 110px);
+}
+.board.k {
+  transform: translate(-220px, 90px);
+}
+.board.l {
+  transform: translate(-280px, 60px);
+}
+.board.m{
+  transform: translate(-330px, 30px);
+}
+.board.n{
+  transform: translate(330px, -130px);
+}
+.board.o{
+  transform: translate(280px, -100px);
+}
+.board.p{
+  transform: translate(240px, -60px);
+}
+.board.q{
+  transform: translate(170px, -30px);
+}
+.board.r{
+  transform: translate(120px, -10px);
+}
+.board.s{
+  transform: translate(70px, 0px);
+}
+.board.t {
+  transform: translate(10px, 10px);
+}
+.board.u {
+  transform: translate(-40px, 10px);
+}
+.board.v {
+  transform: translate(-100px, 10px);
+}
+.board.w {
+  transform: translate(-170px, -20px);
+}
+.board.x {
+  transform: translate(-230px, -50px);
+}
+.board.y {
+  transform: translate(-280px, -80px);
+}
+.board.z {
+  transform: translate(-320px, -130px);
+}
+.board.num1 {
+  transform: translate(250px, -170px);
+}
+.board.num2 {
+  transform: translate(210px, -170px);
+}
+.board.num3 {
+  transform: translate(150px, -170px);
+}
+.board.num4 {
+  transform: translate(100px, -170px);
+}
+.board.num5 {
+  transform: translate(50px, -170px);
+}
+.board.num6 {
+  transform: translate(-10px, -170px);
+}
+.board.num7 {
+  transform: translate(-60px, -170px);
+}
+.board.num8 {
+  transform: translate(-110px, -170px);
+}
+.board.num9 {
+  transform: translate(-160px, -170px);
+}
+.board.num0 {
+  transform: translate(-220px, -170px);
+}
+.board.bye {
+  transform: translate(0px, -260px);
+}*/

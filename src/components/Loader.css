@@ -1,0 +1,14 @@
+.loader-holder {
+  filter: blur(1rem);
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 2s ease-in, filter 0.8s ease-in, height 0.1s ease-in;
+}
+
+.loader-holder.is-loading {
+  filter: blur(0rem);
+  opacity: 1;
+  height: auto;
+  transition: opacity 0.2s ease-in, filter 0.8s ease-in, height 0.3s ease-in, display 0.3s ease-in;
+}

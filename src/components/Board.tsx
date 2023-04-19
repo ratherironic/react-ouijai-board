@@ -21,18 +21,18 @@ function Board () {
 
   useEffect(() => {
     // if answer has changed, loop through all letters and move the board
-    answer.replace(/\s/g, '');
-    answer.toLowerCase();
+    let formatAnswer = answer.replace(/\s/g, '');
+    formatAnswer =  formatAnswer.toLowerCase();
 
     let animations:  Array<ReturnType<typeof setTimeout>> = [];
 
-    for (let i = 0; i < (answer.length + 1); i++) {
+    for (let i = 0; i < (formatAnswer.length + 1); i++) {
       let animation = setTimeout(() => {
-        if(answer.charAt(i) !== '') {
-          if(/^-?\d+$/.test(answer.charAt(i))) {
-            setCurrentLetter(`num${answer.charAt(i)}`);
+        if(formatAnswer.charAt(i) !== '') {
+          if(/^-?\d+$/.test(formatAnswer.charAt(i-1))) {
+            setCurrentLetter(`num${formatAnswer.charAt(i)}`);
           } else {
-            setCurrentLetter(`${answer.charAt(i)}`);
+            setCurrentLetter(`${formatAnswer.charAt(i)}`);
           }
         } else {
           setCurrentLetter(`bye`);

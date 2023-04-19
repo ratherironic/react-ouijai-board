@@ -12,11 +12,15 @@ function QuestionForm () {
 
     dispatch({ type: 'LOADING', question: question});
 
-    fetch(`http://localhost:3001/ask/${encodeURIComponent(question)}`)
-    .then(res => res.json())
-    .then(data => {
-        dispatch({ type: 'COMPLETE', data: data.content });
-    });
+    // If you have access to the Express backend uncomment out this code
+    // fetch(`http://localhost:3001/ask/${encodeURIComponent(question)}`)
+    // .then(res => res.json())
+    // .then(data => {
+    //     dispatch({ type: 'COMPLETE', data: data.content });
+    // });
+    setTimeout(() => {
+      dispatch({ type: 'COMPLETE', data: 'Unfortunately, the spirits are busy right now. So instead you get this default text written by the developer. Not as good right? I meah who knows maybe I\'m a spirit. You wouldn\'t know. Boo! Scary right?' })
+    }, 2100)
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
